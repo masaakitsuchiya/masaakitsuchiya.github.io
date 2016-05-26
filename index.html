@@ -4,15 +4,415 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Sample</title>
+    <title>Masaaki Tsuchiya Portfolio</title>
     <!-- BootstrapのCSS読み込み -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!-- jQuery読み込み -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style>
+        * {
+          margin:0;
+          padding:0;
+        }
+    body {
+          font-family: YuGothic, "游ゴシック", "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
+          background-color: #ddd;
+          font-size: 14px;
+        }
+        .panel-heading{
+          padding: 0;
+        }
+        
+        .container-fluid{
+          padding: 0;
+        }
+        
+        .carousel-inner img {
+            width: 100%;
+        } 
+
+        .carousel-caption{
+            text-align: right;
+            text-shadow: 1px 1px 3px #000;
+        }
+ 
+        .navbar{
+            border-radius: 0;
+            border: none;
+            margin:0;
+            /*background-color: rgba(0,0,0,0.6);
+            margin: 0;
+            
+        */}
+        /*#carousel01{
+        margin-top: -60px;
+        z-index: -1;
+        
+        }*/
+        .title{
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .row{text-align: center;
+             padding: 10px;
+        }
+        
+        .text-box{
+          　text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .list-in-panel{
+          list-style: none;
+          text-align: left;
+        }
+        
+        .shousai{
+          text-align: right;
+        }
+        
+        td {
+          text-align: justify;
+        }
+  
+
+        
+        footer {
+            /*margin-top: 20px;*/
+            text-align: center;
+            padding: 40px 0;
+            background-color: #000;
+            color:#fff;
+        }
+        footer a{
+            color: #fff;
+                  }
+        
+        footer a:visited{
+            color: #fff;
+            text-decoration:none;        
+        }
+        
+        footer a:hover{
+            color: #ddd;
+            text-decoration:none;        
+        }         
+                  
+        .sns-icon{
+            margin-top: 30px;
+        }
+
+        .sns-icon li{
+            padding-left: 20px;
+            color: #fff;
+        }
+        /*.sns-icon li:hover{
+            color: #ddd;
+        }*/
+        
+
+    </style>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+<header>
+ <nav class="navbar navbar-default navbar-inverse" role="navigation">
+  <div class="container-fluid">
+
+    <!-- スマートフォンサイズで表示されるメニューボタンとテキスト -->
+    <div class="navbar-header">
+
+      <!-- 
+
+        メニューボタン 
+        
+        data-toggle : ボタンを押したときにNavbarを開かせるために必要
+        data-target : 複数navbarを作成する場合、ボタンとナビを紐づけるために必要
+
+      -->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-menu-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <!-- タイトルなどのテキスト -->
+      <a class="navbar-brand" href="#">Masaaki Tsuchiya portfolio</a>
+
+    </div>
+
+    <!-- グローバルナビの中身 -->
+    <div class="collapse navbar-collapse" id="nav-menu-1">
+      
+      <!-- 各ナビゲーションメニュー -->
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="#">Profile</a></li>
+       <!-- ドロップダウンのメニューも配置可能 -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Product<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">product_A</a></li>
+                <li><a href="#">product_B</a></li>
+                <li><a href="#">product_C</a></li>
+            <!-- <li class="divider"></li>
+            <li><a href="#"></a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>-->
+              </ul>
+          
+        </li>
+
+        <!-- 通常のリンク -->
+        <li><a href="#">History</a></li>
+        <li><a href="#">Hobby</a></li>
+        <!--<li><a href="#">.etc</a></li>-->
+      </ul>
+    </div>
+  </div>
+ </nav>
+</header>
+<div class="container-fluid">
+<section>
+<!-- 
+    data-ride="carousel"を入れると自動的にスライドが開始される
+-->
+
+<div id="carousel01" class="carousel slide" data-ride="carousel">
+
+    <!-- 中央に表示される丸いボタン -->
+  <ol class="carousel-indicators">
+
+    <!-- 
+        Carouselのid名を合わせる、スライダーの数だけ用意する
+            data-slide-toで何番目のスライドへ移動するか指定する、0から始めるので１つめのスライドなら0を指定
+     -->
+    <li data-target="#carousel01" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel01" data-slide-to="1" class=""></li>
+    <li data-target="#carousel01" data-slide-to="2" class=""></li>
+    <li data-target="#carousel01" data-slide-to="3" class=""></li>
+    <!--<li data-target="#carousel01" data-slide-to="4" class=""></li>-->
+    
+
+  </ol>
+
+  <!-- ここからCarouselの中身 -->
+  <div class="carousel-inner">
+
+    <!-- item = １ページ、activeを入れたところが最初に表示される -->
+    <div class="item active">
+      <img src="carousel01.jpg" alt="carousel_photo1">
+        <div class="carousel-caption">
+          <h3>Profile</h3>
+          <p>不惑ですが、迷うことばかり。興味があればご覧ください。</p>
+          <a class="btn btn-success" href="#">詳細を見る</a>
+        </div>
+    </div>
+    <div class="item">
+      <img src="carousel02.jpg" alt="carousel_photo2">
+        <div class="carousel-caption">
+          <h3>Product</h3>
+          <p>これからJan-Janつくりますよ〜</p>
+          <a class="btn btn-danger" href="#">詳細を見る</a>
+        </div>
+    </div>
+    <div class="item">
+      <img src="carousel03.jpg" alt="carousel_photo3">
+        <div class="carousel-caption">
+          <h3>History</h3>
+          <p>社会人経験１６年。大半は総務人事系の業務に携わってきました。</p>
+          <a class="btn btn-warning" href="#">詳細を見る</a>
+        </div>
+    </div>
+    <div class="item">
+      <img src="carousel04.jpg" alt="carousel_photo4">
+        <div class="carousel-caption">
+          <h3>Hobby</h3>
+          <p>趣味はあまりありません。強いてあげるなら健康志向です。</p>
+          <a class="btn btn-primary" href="#">詳細を見る</a>
+        </div>
+    </div>
+    <!--<div class="item">
+      <img src="carousel05.jpg" alt="carousel_photo5">
+        <div class="carousel-caption">
+          <h3>.etc</h3>
+          <p>ちはやぶるかみよもしらずたったがわからくれないにみずくくるとは</p>
+          <a class="btn btn-primary" href="#">詳細を見る</a>
+        </div>
+    </div>-->
+  </div>
+
+  <!-- ページ送りボタン、ここもCarouselのid名を合わせる -->
+  <a class="left carousel-control" href="#carousel01" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel01" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+</section>
+<section>
+
+  <h2 class="title"><em>Well come to my portfolio</em></h2>
+    <!-- text -->
+    <div class="row">
+     <div class="text-box col-md-12">こんにちは？このポートフォリオサイトはbootstarpを使って作成しました。内容がスカスカですが、これから徐々に追加していきたいと思います。</div>
+    </div>
+
+<!-- 
+  id : ここで指定したidとタイトル部分のdata-parentを合わせる
+-->
+  <div class="row">
+    <div class="panel-group" id="accordion">
+      <div class="col-md-3">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title btn btn-success btn-block" >
+        
+                <!-- 
+                  data-toggle : Collapseを起動させる
+                  data-parent : アコーディオン風に閉じたり開いたりするためのもの
+                  href : 指定した場所のパネルを開く
+                -->
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                  Profile
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse">
+              <div class="panel-body">
+                <table class="table">
+                  <tr>
+                    <th>生年</th><td>西暦1976年</td>
+                  </tr>
+                  <tr>
+                    <th>性別</th><td>男</td>
+                  </tr>
+                  <tr>
+                    <th>住所</th><td>埼玉県さいたま市</td>
+                  </tr>
+                </table>
+                <div class="shousai">
+                  <a href="#" class="shousai btn btn-success">詳細</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-3"> 
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title btn btn-danger btn-block">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                  Product
+                </a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+              <div class="panel-body">
+                <table class="table">
+                  <tr>
+                    <th>ProductA</th><td>productAの説明***********************</td>
+                  </tr>
+                  <tr>
+                    <th>ProductB</th><td>productBの説明***********************</td>
+                  </tr>
+                  <tr>
+                    <th>ProductC</th><td>productCの説明***********************</td>
+                  </tr>
+                </table>
+                <div class="shousai">
+                  <a href="#" class="shousai btn btn-danger">詳細</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-3">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title  btn btn-warning btn-block">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                  History
+                </a>
+              </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+              <div class="panel-body">
+               <table class="table">
+                  <tr>
+                    <th>2012年</th><td>2012年韓国最大手通信会社の日本法人設立に参加。法人運営のために必要な業務に全般的に携わっています。</td>
+                  </tr>
+                  <tr>
+                    <th>2005年</th><td>通算7.5年、管理部門の業務に携る。特に資産管理、労務管理、人事を担当し、その他社内システム管理、ヘルプデスクなど多岐に渡る経験を積んだ</td>
+                  </tr>
+                  <tr>
+                    <th>2003年</th><td>通算1.5年、広告主に対するアフィリエイト広告導入および運用のコンサルティング業務に携った。300社ほどのアフィリエイト広告導入および運用のコンサルティングおよびサポートを担当し、その他新サービスの企画やクレーム対応など多岐に渡る経験を積んだ。</td>
+                  </tr>
+                </table>
+               <div class="shousai">
+                  <a href="#" class="shousai btn btn-warning">詳細</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-3">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title  btn btn-primary btn-block">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                  Hobby
+                </a>
+              </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse">
+              <div class="panel-body">
+                <p>
+                これといって趣味はありませんが、強いてあげるなら健康志向です。40歳になりましたが、子供がまだ小さいため、できるだけ健康で長生きする必要があります。一方で昨年はぎっくり腰や胆石症になるなど健康面で不安がでてきたので健康に気をつけるようになりました。以下の3点を実践したところ、体重が84kgから70kgになり、体脂肪率、血中コレステロール、尿酸値も改善されました。
+                </p>
+                <table class="table">
+                  <tr>
+                    <th>運動</th><td>キックボクササイズ</td>
+                  </tr>
+                  <tr>
+                    <th>食事制限</th><td>油っぽい食事を控える</td>
+                  </tr>
+                  <tr>
+                    <th>サプリメント摂取</th><td>プロテイン、ごぼう茶</td>
+                  </tr>
+                </table>
+                <div class="shousai">
+                  <a href="#" class="shousai btn btn-primary">詳細</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</section>
+</div>
+<footer>
+  <ul class="sns-icon list-inline">
+        <li>
+            <a href="#"><i class="fa fa-twitter fa-3x"></i></a>
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-facebook fa-3x"></a></i>
+        </li>
+        <li>
+            <a href="https://github.com/masaakitsuchiya" target="_blank"><i class="fa fa-github fa-3x"></a></i>
+        </li>
+    </ul>
+    <div class="copyright">© 2016 Masaaki Tsuchiya</div>   
+</footer>
   </body>
 </html>
